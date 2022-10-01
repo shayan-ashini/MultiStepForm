@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/index.css">
+    <title>MultiStepForm</title>
+</head>
+
+<body>
+
+    <main>
+        <div class="bigbox">
+            <div class="head">
+                <h1>Registration Form</h1>
+            </div>
+            <div class="mid">
+                <div id="line1"></div>
+                <div id="line2"></div>
+                <div id="line3"></div>
+                <div><span class="circle">1</span>
+                    <h5>Intro</h5>
+                </div>
+                <div><span class="circle" id="circle2">2</span>
+                    <h5>Contact</h5>
+                </div>
+                <div><span class="circle" id="circle3">3</span>
+                    <h5>Info</h5>
+                </div>
+                <div><span class="circle" id="circle4">4</span>
+                    <h5>Addr</h5>
+                </div>
+            </div>
+
+            <div class="foot">
+
+                <div class="part1">
+                    <div class="user">
+                        <label for="#username">Username</label>
+                        <input type="text" id="username" placeholder="Username">
+                    </div>
+                    <div class="pass">
+                        <label for="password">Password</label>
+                        <input type="text" id="password" placeholder="Password">
+                    </div>
+                    <div class="btn">
+                        <button id="firstNext">Next</button>
+                    </div>
+
+                </div>
+                <div class="part2">
+                    <div class="pho">
+                        <label for="#phone">Phone</label>
+                        <input type="text" id="phone" placeholder="PhoneNumber">
+                    </div>
+                    <div class="emi">
+                        <label for="#email">Email</label>
+                        <input type="email" id="email" placeholder="Email">
+                    </div>
+                    <div class="btn">
+
+                        <button id="firstPrevios">Previos</button>
+                        <button id="secondNext">Next</button>
+                    </div>
+                </div>
+                <div class="part3">
+                    <div class="dat">
+                        <label for="#date">Date Of Birth</label>
+                        <input type="date" id="date" placeholder="YYYY-MM-DD">
+                    </div>
+                    <div class="nat">
+                        <label for="#national">National ID</label>
+                        <input type="text" id="national" placeholder="National ID">
+                    </div>
+                    <div class="btn">
+
+                        <button id="secondPrevios">Previos</button>
+                        <button id="thirdNext">Next</button>
+                    </div>
+                </div>
+                <div class="part4">
+                    <div class="pas">
+                        <label for="#pastal">Pastal Code</label>
+                        <input type="text" id="pastal" placeholder="Pastal Code">
+                    </div>
+                    <div class="pos">
+                        <label for="#position">Position</label>
+                        <input type="text" id="position" placeholder="Position">
+                    </div>
+                    <div class="btn">
+
+                        <button id="thirdPrevios">Previos</button>
+                        <button id="submit">Submit</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </main>
+
+
+    <script>
+        let line1 = document.getElementById('line1')
+        let line2 = document.getElementById('line2')
+        let line3 = document.getElementById('line3')
+
+        let circle2 = document.getElementById('circle2')
+        let circle3 = document.getElementById('circle3')
+        let circle4 = document.getElementById('circle4')
+
+        let username = document.getElementById('username')
+        let password = document.getElementById('password')
+        let phone = document.getElementById('phone')
+
+        let part1 = document.getElementsByClassName('part1')[0]
+        let part2 = document.getElementsByClassName('part2')[0]
+        let part3 = document.getElementsByClassName('part3')[0]
+        let part4 = document.getElementsByClassName('part4')[0]
+
+
+        // first btn//////////////////////////////////////////////////////////////////////////
+
+        let firstNext = document.getElementById('firstNext')
+
+        firstNext.addEventListener('click', function () {
+
+
+            part1.style.display = 'none'
+            part2.style.display = 'block'
+            line2.style.backgroundColor = 'darkblue'
+            circle2.style.backgroundColor = 'darkblue'
+        })
+
+        // second btn ///////////////////////////////////////////////////////////////////////////////
+
+        let firstPrevios = document.getElementById('firstPrevios')
+        let secondNext = document.getElementById('secondNext')
+
+        firstPrevios.addEventListener('click', function () {
+
+            part1.style.display = 'block'
+            part2.style.display = 'none'
+            line2.style.backgroundColor = 'rgb(171, 171, 171)'
+            circle2.style.backgroundColor = 'rgb(171, 171, 171)'
+
+        })
+
+        secondNext.addEventListener('click', function () {
+
+
+            part2.style.display = 'none'
+            part3.style.display = 'block'
+            line1.style.backgroundColor = 'darkblue'
+            circle3.style.backgroundColor = 'darkblue'
+        })
+
+        // third btn //////////////////////////////////////////////////////////////////////////////
+
+        let secondPrevios = document.getElementById('secondPrevios')
+        let thirdNext = document.getElementById('thirdNext')
+
+        secondPrevios.addEventListener('click', function () {
+
+            part2.style.display = 'block'
+            part3.style.display = 'none'
+            line1.style.backgroundColor = 'rgb(171, 171, 171)'
+            circle3.style.backgroundColor = 'rgb(171, 171, 171)'
+
+        })
+
+        thirdNext.addEventListener('click', function () {
+
+
+            part3.style.display = 'none'
+            part4.style.display = 'block'
+            line3.style.backgroundColor = 'darkblue'
+            circle4.style.backgroundColor = 'darkblue'
+        })
+
+        // 4 btn //////////////////////////////////////////////////////////////////////////////////////////////////
+
+        let thirdPrevios = document.getElementById('thirdPrevios')
+        let submit = document.getElementById('submit')
+
+        thirdPrevios.addEventListener('click', function () {
+
+            part3.style.display = 'block'
+            part4.style.display = 'none'
+            line3.style.backgroundColor = 'rgb(171, 171, 171)'
+            circle4.style.backgroundColor = 'rgb(171, 171, 171)'
+
+        })
+
+        let x = document.getElementById('phone').value
+
+
+
+        submit.addEventListener('click', function () {
+
+            if (document.getElementById('email').value == '' ||
+                document.getElementById('phone').value == '' ||
+                document.getElementById('date').value == '' ||
+                document.getElementById('national').value == '' ||
+                document.getElementById('pastal').value == '' ||
+                document.getElementById('position').value == '') {
+                alert('Fill out the form completely')
+
+
+            } else {
+                alert('Your information has been saved')
+                line3.style.backgroundColor = 'rgb(171, 171, 171)'
+                line2.style.backgroundColor = 'rgb(171, 171, 171)'
+                line1.style.backgroundColor = 'rgb(171, 171, 171)'
+                circle3.style.backgroundColor = 'rgb(171, 171, 171)'
+                circle4.style.backgroundColor = 'rgb(171, 171, 171)'
+                circle2.style.backgroundColor = 'rgb(171, 171, 171)'
+
+                part1.style.display = 'block'
+                part4.style.display = 'none'
+
+                username.value = ''
+                password.value = ''
+                document.getElementById('email').value = ''
+                document.getElementById('phone').value = ''
+                document.getElementById('date').value = ''
+                document.getElementById('national').value = ''
+                document.getElementById('pastal').value = ''
+                document.getElementById('position').value = ''
+
+
+
+            }
+
+
+        })
+    </script>
+
+</body>
+
+</html>

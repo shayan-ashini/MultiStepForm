@@ -1,0 +1,371 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(233, 219, 219);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.bigbox{
+    width: 450px;
+    height: 500px;
+    background-color: white;
+  
+    border-radius: 2px;
+    border: 2px solid rgb(171, 171, 171) ;
+    border-top: 5px solid darkblue;
+
+    
+}
+
+.head{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mid{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+.mid>div:nth-child(1){
+    height: 5px;
+    background-color: rgb(171, 171, 171);
+    width: 75px;
+    position: absolute;
+    top: 38%;
+}
+.mid>div:nth-child(2){
+    height: 5px;
+    background-color: rgb(171, 171, 171);
+    width: 75px;
+    position: absolute;
+    top: 38%;
+    left: 16%;
+}
+.mid>div:nth-child(3){
+    height: 5px;
+    background-color: rgb(171, 171, 171);
+    width: 75px;
+    position: absolute;
+    top: 38%;
+    left: 67%;
+}
+.mid>div:nth-child(4)>span{
+    background-color: darkblue;
+
+}
+
+.mid>div{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.mid>div>h5{
+    font-weight: bold;
+    padding-top: 10px;
+    color: rgb(95, 94, 94);
+}
+
+
+.circle{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    background-color: rgb(171, 171, 171);
+    z-index: 100;
+    color: white;
+}
+
+
+.foot{
+    width: 100%;
+    height: 60%;
+    /* background-color: green; */
+    position: relative;
+}
+
+.foot>div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+.user,.pass{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+}
+
+.part1>.user>input{
+    width: 85%;
+    height: 40px;
+    margin-top: 5px;
+    padding-left: 5px;
+
+}
+
+.part1>.user>label{
+    padding-right: 65%;
+    margin-top: 20px;
+    font-size: 18px;
+}
+.part1>.pass>input{
+    width: 85%;
+    height: 40px;
+    margin-top: 5px;
+    padding-left: 5px;
+
+}
+
+.part1>.pass>label{
+    padding-right: 65%;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+
+.part1>.btn{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-right: 9%;
+}
+
+.part1>.btn>button{
+    width: 150px;
+    height: 35px;
+    background-color: darkblue;
+    border: none;
+    border-radius: 2px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* end part1 //////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.part2{
+    display: none;
+}
+
+
+
+.pho,.emi{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+}
+
+.part2>.pho>input{
+    width: 85%;
+    height: 40px;
+    margin-top: 5px;
+    padding-left: 5px;
+
+}
+
+.part2>.pho>label{
+    padding-right: 65%;
+    margin-top: 20px;
+    font-size: 18px;
+}
+.part2>.emi>input{
+    width: 85%;
+    height: 40px;
+    margin-top: 5px;
+    padding-left: 5px;
+
+}
+
+.part2>.emi>label{
+    padding-right: 65%;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+
+.part2>.btn{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+   
+}
+
+.part2>.btn>button{
+    width: 150px;
+    height: 35px;
+    background-color: darkblue;
+    border: none;
+    border-radius: 2px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* end part2/////////////////////////////////////////////////////////////////////////// */
+
+.part3{
+    display: none;
+}
+
+
+
+.dat,.nat{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+}
+
+.part3>.dat>input{
+    width: 85%;
+    height: 40px;
+    margin-top: 5px;
+    padding-left: 5px;
+
+}
+
+.part3>.dat>label{
+    padding-right: 62%;
+    margin-top: 20px;
+    font-size: 18px;
+}
+.part3>.nat>input{
+    width: 85%;
+    height: 40px;
+    margin-top: 5px;
+    padding-left: 5px;
+
+}
+
+.part3>.nat>label{
+    padding-right: 65%;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+
+.part3>.btn{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+   
+}
+
+.part3>.btn>button{
+    width: 150px;
+    height: 35px;
+    background-color: darkblue;
+    border: none;
+    border-radius: 2px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* end part3//////////////////////////////////////////////////////////////////////////////// */
+
+
+.part4{
+    display: none;
+}
+
+
+.pas,.pos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+}
+
+.part4>.pas>input{
+    width: 85%;
+    height: 40px;
+    margin-top: 5px;
+    padding-left: 5px;
+
+}
+
+.part4>.pas>label{
+    padding-right: 62%;
+    margin-top: 20px;
+    font-size: 18px;
+}
+.part4>.pos>input{
+    width: 85%;
+    height: 40px;
+    margin-top: 5px;
+    padding-left: 5px;
+
+}
+
+.part4>.pos>label{
+    padding-right: 65%;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+
+.part4>.btn{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+   
+}
+
+.part4>.btn>button{
+    width: 150px;
+    height: 35px;
+    background-color: darkblue;
+    border: none;
+    border-radius: 2px;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
